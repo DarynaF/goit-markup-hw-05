@@ -127,6 +127,10 @@ align-items: center;
     
 }
 
+.site-item .nav-links {
+    position: relative;
+}
+
 .nav-links:hover,
 .nav-links:focus,
 .nav-links:active {
@@ -137,6 +141,8 @@ align-items: center;
 color: var(--tittel-text-color);
 font-family: var(--primary-font);
     font-style: normal;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -144,6 +150,18 @@ font-family: var(--primary-font);
     display: block;
    
 }
+
+
+.site-item > .current::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
 .site-item { margin-left: 50px;}
 
 .header-contacts{display: flex;
@@ -267,7 +285,27 @@ h1 {
 
 /*Чем мы занимаемся*/
 .work-with {
-    padding-top: 0;
+    padding: 0;
+    margin-bottom: 94px;
+}
+
+.work-with-img {
+    position: relative;
+}
+
+.work-with-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--background-color);
 }
 
 .work-with-titel {
